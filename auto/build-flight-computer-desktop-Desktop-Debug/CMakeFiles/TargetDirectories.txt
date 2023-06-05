@@ -1,0 +1,9 @@
+/home/olsport/Documents/Rockets/PC-Software/Flight-Computer-UI/auto/build-flight-computer-desktop-Desktop-Debug/CMakeFiles/flight-computer-desktop.dir
+/home/olsport/Documents/Rockets/PC-Software/Flight-Computer-UI/auto/build-flight-computer-desktop-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/olsport/Documents/Rockets/PC-Software/Flight-Computer-UI/auto/build-flight-computer-desktop-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/olsport/Documents/Rockets/PC-Software/Flight-Computer-UI/auto/build-flight-computer-desktop-Desktop-Debug/CMakeFiles/list_install_components.dir
+/home/olsport/Documents/Rockets/PC-Software/Flight-Computer-UI/auto/build-flight-computer-desktop-Desktop-Debug/CMakeFiles/install.dir
+/home/olsport/Documents/Rockets/PC-Software/Flight-Computer-UI/auto/build-flight-computer-desktop-Desktop-Debug/CMakeFiles/install/local.dir
+/home/olsport/Documents/Rockets/PC-Software/Flight-Computer-UI/auto/build-flight-computer-desktop-Desktop-Debug/CMakeFiles/install/strip.dir
+/home/olsport/Documents/Rockets/PC-Software/Flight-Computer-UI/auto/build-flight-computer-desktop-Desktop-Debug/CMakeFiles/flight-computer-desktop_autogen_timestamp_deps.dir
+/home/olsport/Documents/Rockets/PC-Software/Flight-Computer-UI/auto/build-flight-computer-desktop-Desktop-Debug/CMakeFiles/flight-computer-desktop_autogen.dir
