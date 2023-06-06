@@ -16,6 +16,11 @@ QT += widgets
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 # Input
+#CONFIG += debug
+DESTDIR += build
+OBJECTS_DIR += build
+MOC_DIR += build
 HEADERS += mainwindow.h
 FORMS += mainwindow.ui
-SOURCES += main.cpp mainwindow.cpp
+SOURCES += main.cpp \
+           mainwindow.cpp
