@@ -17,7 +17,7 @@ CXX           = g++
 DEFINES       = -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -O2 -flto -fno-fat-lto-objects -Wall -Wextra -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -O2 -flto -fno-fat-lto-objects -Wall -Wextra -D_REENTRANT -fPIC $(DEFINES)
-INCPATH       = -I. -I. -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -Ibuild -I. -I/usr/lib/qt/mkspecs/linux-g++
+INCPATH       = -I. -I. -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -Ibuild -Ibuild -I/usr/lib/qt/mkspecs/linux-g++
 QMAKE         = /usr/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -365,7 +365,7 @@ TARGET        = build/flight-computer-desktop
 first: all
 ####### Build rules
 
-build/flight-computer-desktop: ui_mainwindow.h $(OBJECTS)  
+build/flight-computer-desktop: build/ui_mainwindow.h $(OBJECTS)  
 	@test -d build/ || mkdir -p build/
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
@@ -1028,12 +1028,12 @@ compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_mainwindow.h
+compiler_uic_make_all: build/ui_mainwindow.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_mainwindow.h
-ui_mainwindow.h: mainwindow.ui \
+	-$(DEL_FILE) build/ui_mainwindow.h
+build/ui_mainwindow.h: mainwindow.ui \
 		/usr/bin/uic
-	/usr/bin/uic mainwindow.ui -o ui_mainwindow.h
+	/usr/bin/uic mainwindow.ui -o build/ui_mainwindow.h
 
 compiler_yacc_decl_make_all:
 compiler_yacc_decl_clean:
@@ -1049,7 +1049,7 @@ build/main.o: main.cpp mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/main.o main.cpp
 
 build/mainwindow.o: mainwindow.cpp mainwindow.h \
-		ui_mainwindow.h
+		build/ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/mainwindow.o mainwindow.cpp
 
 build/moc_mainwindow.o: build/moc_mainwindow.cpp 
